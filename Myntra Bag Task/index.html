@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myntra Bag</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Myntra Bag Collection</h1>
+
+  <hr>
+
+  <!-- button "Add to Bag" starts  -->
+  <button class="btn-class" onclick="qty++; document.querySelector('.h2title').innerText=`Your Bag has ${qty} items`; const myName='Kishore S R';
+  let cost=100*qty;
+  
+  let gst=0.18*cost;
+  
+  let msg=document.querySelector('.cart-msg');
+  msg.innerHTML=`${myName}, Your Final Bag Amount: <br>
+  Quantity = ${qty} <br>
+  Cost = ${cost} <br>
+  GST = ${gst} <br>
+  <hr>
+  <b>Final Amount:<b> Rs. ${cost + gst}
+  `">Add to Bag</button>
+  <!-- button "Add to Bag" ends  -->
+
+
+  <!-- button "Add to Wishlist" starts  -->
+  <button id="btn-id" onclick="if(qty>0){qty--;document.querySelector('.h2title').innerText=`Your Bag has ${qty} items`};
+  myName='Kishore S R';
+cost=100*qty;
+
+gst=0.18*cost;
+
+msg=document.querySelector('.cart-msg');
+msg.innerHTML=`${myName}, Your Final Bag Amount: <br>
+Quantity = ${qty} <br>
+Cost = ${cost} <br>
+GST = ${gst} <br>
+<hr>
+<b>Final Amount:<b> Rs. ${cost + gst}
+`">🧡 ADD TO WISHLIST</button>
+  <!-- button "Add to Wishlist" ends  -->
+
+
+  <!-- button "Add 1:1 Sale starts  -->
+  <button class="btn-class" onclick="qty+=2; document.querySelector('.h2title').innerText=`Your Bag has ${qty} items`;
+  myName='Kishore S R';
+cost=100*qty;
+
+gst=0.18*cost;
+
+msg=document.querySelector('.cart-msg');
+msg.innerHTML=`${myName}, Your Final Bag Amount: <br>
+Quantity = ${qty} <br>
+Cost = ${cost} <br>
+GST = ${gst} <br>
+<hr>
+<b>Final Amount:<b> Rs. ${cost + gst}
+`
+">Add 1+1 Sale</button>
+  <!-- button "Add 1:1 Sale ends  -->
+
+
+  <h2 class="h2title">Your Bag has 0 items</h2>
+
+  <h3 class="cart-msg">Start your Shopping 🛒</h3>
+  <script src="script.js">
+
+  </script>
+</body>
+
+</html>

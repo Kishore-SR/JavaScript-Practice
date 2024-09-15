@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSR Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>My Simple Calculator</h1>
+
+    <div class="calculator">
+        <h2 class="display">Output</h2>
+
+        <!-- buttons starts -->
+        <div class="btn-container">
+            <div class="row-wise">
+                <button style="background-color: rgb(252, 159, 159);"
+                    onclick="displayText=' '; document.querySelector('.display').innerHTML=`${displayText}`">C</button>
+
+                <button
+                    onclick="displayText+='.'; document.querySelector('.display').innerHTML=`${displayText}`">.</button>
+
+                <button
+                    onclick="displayText+='0'; document.querySelector('.display').innerHTML=`${displayText}`">0</button>
+            </div>
+
+            <div class="row-wise">
+                <button
+                    onclick="displayText+='1'; document.querySelector('.display').innerHTML=`${displayText}`">1</button>
+
+                <button
+                    onclick="displayText+='2'; document.querySelector('.display').innerHTML=`${displayText}`">2</button>
+
+
+
+                <button
+                    onclick="displayText+='3'; document.querySelector('.display').innerHTML=`${displayText}`">3</button>
+
+
+            </div>
+
+            <div class="row-wise">
+
+                <button
+                    onclick="displayText+='4'; document.querySelector('.display').innerHTML=`${displayText}`">4</button>
+
+
+
+                <button
+                    onclick="displayText+='5'; document.querySelector('.display').innerHTML=`${displayText}`">5</button>
+
+                <button
+                    onclick="displayText+='6'; document.querySelector('.display').innerHTML=`${displayText}`">6</button>
+            </div>
+
+            <div class="row-wise">
+
+                <button
+                    onclick="displayText+='7'; document.querySelector('.display').innerHTML=`${displayText}`">7</button>
+                <button
+                    onclick="displayText+='8'; document.querySelector('.display').innerHTML=`${displayText}`">8</button>
+
+                <button
+                    onclick="displayText+='9'; document.querySelector('.display').innerHTML=`${displayText}`">9</button>
+            </div>
+
+            <div class="row-wise">
+
+
+                <button
+                    onclick="displayText+='+'; document.querySelector('.display').innerHTML=`${displayText}`">+</button>
+
+                <button
+                    onclick="displayText+='-'; document.querySelector('.display').innerHTML=`${displayText}`">-</button>
+
+                <button style="background-color: lightgreen;" onclick="calculateResult()">=</button>
+
+            </div>
+
+            <div class="row-wise">
+                <button
+                    onclick="displayText+='/'; document.querySelector('.display').innerHTML=`${displayText}`">/</button>
+
+                <button
+                    onclick="displayText+='*'; document.querySelector('.display').innerHTML=`${displayText}`">x</button>
+            </div>
+        </div>
+        <!-- buttons ends -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
