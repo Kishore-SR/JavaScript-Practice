@@ -35,3 +35,13 @@ let [num, name, city] = userInfo;
 console.log(num);
 console.log(name);
 console.log(city);
+
+//Accumalator Pattern:
+let numbers = [1, 2, 3, 4, 5];
+let sum = 0; // Initialize the accumulator
+
+for (let number of numbers) {
+    sum += number; // Update the accumulator
+}
+
+console.log(sum); 
