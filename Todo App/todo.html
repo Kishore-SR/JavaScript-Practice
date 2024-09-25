@@ -14,16 +14,14 @@
     <main>
         <h1>Todo App</h1>
 
-        <input id="todo-input" type="text" placeholder="Enter task here...">
-        <input id="date-input" type="date">
-        <button onclick="addTask();">Add Task</button>
+        <div class="grid-container">
+            <input id="todo-input" type="text" placeholder="Enter task here...">
+            <input id="date-input" type="date">
+            <button class="addtask" onclick="addTask();">Add Task</button>
+        </div>
 
-        <div class="task-container">
-            <div>
-                <span>taskList[i]
-                <button class="delete-btn" onclick="deleteTask();">Delete</button>
-                </span>
-            </div>
+        <div class="task-container grid-container">
+            <!-- Each task get's adding here using JavaScript -->
         </div>
     </main>
 

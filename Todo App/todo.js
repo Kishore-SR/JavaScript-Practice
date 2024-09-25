@@ -14,11 +14,16 @@ function addTask() {
   let dateValue = dateEle.value;
 
   if (inputValue.length > 0) {
+    if(dateValue.length > 0){
     taskList.push(inputValue); //Adding task into array
     taskDates.push(dateValue); //Adding due date into array
     inputEle.value = "";
     dateEle.value = "";
     displayTask();
+    }
+    else{
+        alert("Also add 'Due Date' of the task! 🕒")
+    }
   } else {
     alert("Enter Task First");
   }
@@ -30,13 +35,11 @@ function displayTask() {
 
   for (let i = 0; i < taskList.length; i++) {
     htmlDisplay += `
-             <div>
-                <span> ${taskList[i]}  ${taskDates[i]}</span>
-                <button onclick="taskList.splice(${i}, 1);
+                <span class="task-name"> ${taskList[i]} </span> <span class="due-date"> ${taskDates[i]}</span>
+                <button  class="delete-btn" onclick="taskList.splice(${i}, 1);
                 taskDates.splice(${i},1);
                 displayTask();
                 ">Delete</button>
-            </div>
             `;
   }
   tasksEle.innerHTML = htmlDisplay; // To display the task in the todo container

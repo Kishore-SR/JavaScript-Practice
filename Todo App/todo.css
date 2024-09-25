@@ -6,3 +6,56 @@ body {
   font-family: sans-serif;
 }
 
+h1{
+    margin-top: 10vh;
+    color: purple;
+    font-size: 34px;
+}
+
+input{
+    height: 30px;
+    font-size: 16px;
+    margin: 10px;
+}
+button{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: scale 0.1s;
+}
+button:hover{
+    scale: 0.96;
+    opacity: 0.9;
+}
+.addtask{
+    background-color: rgb(27, 223, 27);
+    width: max-content;
+}
+.delete-btn{
+    background-color: rgb(219, 62, 62);
+    color: white;
+    margin: 8px;
+}
+
+/* Tasks container stylings */
+.grid-container{
+    display: grid;
+    grid-template-columns: 250px 130px 100px;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+}
+.task-container{
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+span{
+    background-color: yellow;
+    padding: 8px;
+    margin: 10px;
+    text-align:center;
+}
