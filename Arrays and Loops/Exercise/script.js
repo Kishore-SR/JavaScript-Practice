@@ -39,3 +39,40 @@ while (primeCount < 5) {
     }
     num++; 
 }
+
+
+// Q5 - A for loop to print the numbers in reverse order (from 10 to 1) 
+let num2 = 10;
+for(let i=num2; i>=1; i--){
+    console.log(i);
+}
+
+
+// Q6 - Using continue print only postive numbers in the array 
+let array = [2,-5,4,-39,324,982,-938];
+for(let i=0; i<array.length; i++){
+    if(array[i] < 0){
+        continue;  
+    }
+    console.log(array[i]);
+}
+
+
+// Q6 - Using accumulator pattern concatenate all the strings in the array 
+let strArray = ['My', 'name', 'is', 'Kishore S R'];
+
+let result ='';
+for(let i=0; i<strArray.length; i++){
+    result += strArray[i] + ' ';
+}
+console.log(result);
+
+// OR
+
+let [a,b,c,d] = strArray;
+console.log(`${a} ${b} ${c} ${d}`);
+
+// OR
+
+console.log(strArray.join(' ')); //We can also join the elements in the 'array' using join() method - Also we can specify the sperator in-between the strArray while joining
+
