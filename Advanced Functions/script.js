@@ -27,3 +27,41 @@ btnEle.addEventListener("click", () => {
     btnEle.style.backgroundColor = 'rgb(243, 88, 88)';
   }
 });
+
+
+// EVENT LISTENERS 
+let box=document.querySelector('.container');
+let btnNew = document.querySelector('.btn-event');
+let text = document.querySelector('.text-msg');
+
+// For Mouse:
+box.addEventListener('mouseover', ()=> {console.log('Mouse Pointer is inside the div container.')});
+box.addEventListener('mouseout', ()=> {console.log('Mouse moved out of container')});
+
+//For Keyboard:
+text.addEventListener('keydown', ()=>{console.log('Key Pressed')});
+let keyCount=0;
+text.addEventListener('input', () => {console.log(`Key Pressed: ${keyCount++} time: The key is ${event.key}`)});
+text.addEventListener('keydown', (event) => {console.log(`Key Pressed is: ${event.key}`)});
+
+// For Window: 
+window.addEventListener('resize', () => {
+  console.log('Window resized!');
+});
+window.addEventListener('scroll', () => {
+  console.log('Page scrolled!');
+});
+window.addEventListener('load', () => {
+  console.log('Page fully loaded!');
+});
+
+// Adding loading animation for button 
+const button = document.querySelector('.my-btn');
+
+button.addEventListener('click', function() {
+  button.classList.add('loading');  
+  
+  setTimeout(function() {
+    button.classList.remove('loading');  
+  }, 3000);  
+});

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>JavaScript Functions</title>
 
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
-        .btn{
+
+        .btn {
             background-color: rgb(247, 129, 129);
             color: white;
             padding: 10px;
@@ -17,12 +19,83 @@
             cursor: pointer;
             font-size: larger;
         }
+
+        .container {
+            width: 50vw;
+            background-color: lightpink;
+            margin: 20px auto;
+            padding: 10px;
+            border: 4px solid palevioletred;
+            border-radius: 10px;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            background-color: blue;
+            /* margin-top: -20px; */
+            width: 100px;
+            height: 2px;
+            margin: auto;
+        }
+
+        .my-btn {
+            width: max-content;
+            padding: 10px;
+            font-size: 19px;
+            background-color: lightgreen;
+        }
+
+        .my-btn.loading::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+            border: 2px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 2px solid #2b7dfa;
+            animation: spin 1s linear infinite;
+        }
+
+        .my-btn.loading::after {
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
+
 <body>
     <h1>JS Functions</h1>
     <button class="btn">Subscribe</button>
 
+    <!-- for event listener -->
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur necessitatibus soluta ullam
+        dolorem inventore fuga maiores alias, saepe provident voluptate facilis minus cum. Temporibus harum consequuntur
+        quod similique molestias facilis repellat voluptates nesciunt corporis, qui nulla? Ullam, aliquam nobis eaque
+        vitae maxime voluptatum rem, sunt quo consequuntur maiores cupiditate! Qui quo numquam dolore quasi, voluptate
+        eos placeat explicabo. Facilis non adipisci in iste autem velit veniam vel ipsam quam unde blanditiis tempora
+        nihil, quas laborum! Ipsa enim beatae ut tempore est officiis molestias magnam impedit. Rerum dolorem earum
+        numquam commodi eveniet ex, perspiciatis itaque ipsam aut harum tempora asperiores?
+    </div>
+    <input type="text" class="text-msg">
+    <button class="btn-event">CLICK HERE</button>
+
+    <h2>Chapter 1</h2>
+    <h4>Submit Assignment Here</h4>
+    <button class="my-btn">Submit</button>
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
