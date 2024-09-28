@@ -65,3 +65,10 @@ button.addEventListener('click', function() {
     button.classList.remove('loading');  
   }, 3000);  
 });
+
+
+// FOR EACH loop 
+let foodArray = ['briyani', 'dosa', 'idli', 'pongal', 'rice & sambar'];
+foodArray.forEach(foodItem => {
+  console.log(`Your food: ${foodItem}`);
+});
