@@ -17,22 +17,16 @@ let runTwice = function(run){
 runTwice(printStatement);
 
 // Q3 - A button which should grow 'double in size' on clicking after 2 seconds 
-// let btnClick = document.querySelector('.btn');
-// btnClick.addEventListener('click', ()=>{
-//     setTimeout(()=>{
-//         btnClick.style.scale='4';
-//     },2000);
-// })
 let btnClick = document.querySelector('.btn');
-let fsize=18;
 btnClick.addEventListener('click', ()=>{
     setTimeout(()=>{
-        fsize *= 2;
-        btnClick.style.fontSize='fsize';
+        btnClick.style.scale='2';
     },2000);
 })
 
-// Q4 - Do it with eventListener (already done) 
+// Q4 - Do the above Q with eventListener (already done) 
+
+// Q5 - Find sum of array elements using forEach loop 
 let array = [1,2,3,4,5,6,7,8,9,10];
 let arraySum = 0;
 array.forEach(element => {
@@ -40,7 +34,7 @@ array.forEach(element => {
 });
 console.log(`Array Sum: ${arraySum}`);
 
-// Q5 - Return the squares of array elements 
+// Q6 - Return the squares of array elements 
 let squares = array.map((num)=>{
     return num * num;
 })
