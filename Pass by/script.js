@@ -17,4 +17,21 @@ console.log(`Modified Object: ${newObj}`);
 //NOTE: This above console.log won't print the objects
 
 
+// IMP: Different ways to print the objects in console window 
+// Method 1: using JSON.stringify i.e by converting object into string
+console.log(`Orignal Obj: ${JSON.stringify(orgObj)}`);
+console.log(`Orignal Obj: ${JSON.stringify(newObj)}`);
+
+// Method 2: By using the console.table() method 
+console.table(orgObj);
+console.table(newObj);
+
+// Method 3: Using for...in loop 
+for (let key in orgObj)
+    {
+    console.log(`${key}: ${orgObj[key]}`);
+    }
+
+//Method 4: Directly printing the key-value pairs by orgObj.name
+console.log(`Name: ${orgObj.name}, Age: ${orgObj.age}`);
 
