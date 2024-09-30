@@ -94,3 +94,59 @@ function checkEqual(obj1, obj2){
     return true;
 }
 console.log(checkEqual(obj1,obj2));
+
+
+// CLOSURES in JavaScript
+function outerFunction() {
+    let outerVariable = 'I am from outer function';
+
+    function innerFunction() {
+        console.log(outerVariable); // 'outerVariable' is accessible here
+    }
+
+    return innerFunction; // Return the inner function
+}
+const closureExample = outerFunction();
+closureExample(); // Output: 'I am from outer function'
+
+
+// Destructuring in JavaScript:
+let person = {name:'Ashok', age:27};
+// let {name, age} = person;
+// console.log(name, age);
+
+//No need to main the order of keys while destructuring 'Objects'
+// let {age, name} = person;
+// console.log(age, name);
+
+//Renaming the properties in object
+let {age: myAge, name: MyName} =person;
+console.log(myAge, MyName);
+
+
+//SPREAD (...) operator
+// #1 To copy the elements from one array to another 
+let fruits = ['Apple', 'Mango', 'Banana', 'Kiwi'];
+let newFruits = [...fruits];
+console.log(newFruits);
+
+// #2 To merge two arrays or even objects 
+let A = [1,2,3,4,5];
+let B = [6,7,8,9,10];
+let C = [...A, ...B];
+console.log(C);
+
+// #3 To pass elements of array all at once as arguments to a function 
+function sumArray(a,b,c,d,e) //because array has 5 elements
+{
+    return a + b + c + d + e;
+}
+console.log(sumArray(...A)); //Here each number from array 'A' is passed to it's respective argument position
+
+// #4 To separate the chars in the String 
+let place = 'Bangalore';
+console.log([...place]);
+// or 
+let placeLetters = [...place]; // Storing the letters as a new Array
+console.log(placeLetters[4]);
+console.log(typeof placeLetters);
