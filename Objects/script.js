@@ -115,7 +115,7 @@ let person = {name:'Ashok', age:27};
 // let {name, age} = person;
 // console.log(name, age);
 
-//No need to main the order of keys while destructuring 'Objects'
+// No need to main the order of keys while destructuring 'Objects'
 // let {age, name} = person;
 // console.log(age, name);
 
@@ -150,3 +150,22 @@ console.log([...place]);
 let placeLetters = [...place]; // Storing the letters as a new Array
 console.log(placeLetters[4]);
 console.log(typeof placeLetters);
+
+// Using .reduce funtion to easily find the sum of array elements 
+let sum = (...numbers) =>{
+    return numbers.reduce((result, currValue) => (result += currValue),0);
+};
+console.log(`SUM OF ARRAY ELEMENTS: ${sum(1,2,3,4,5)}`);
+
+
+// STRING PADDING: 
+let str = 'Kishore';
+console.log(str.padStart(10, '*'));
+
+console.log(str.padEnd(10,'*'));
+
+// Using 'Spread' Operator in Objects: 
+let object1 = {a: 10, b: 20, c:30};
+let object2 = {c: 40, d: 50, e:60};
+let newObject = {a:90,...object1, ...object2}; //Any repeated key-value pair which is common in both the objects - get's overwritten by the last repeated value
+console.log(newObject);
