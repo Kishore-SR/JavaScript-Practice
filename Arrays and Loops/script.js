@@ -45,3 +45,13 @@ for (let number of numbers) {
 }
 
 console.log(sum); 
+
+
+// Array.flat method to make multi-dimensional array into a single-dimensional array 
+let nestedArray1 = [1,2,[3,4],5];
+let flatArray1 = nestedArray1.flat();
+console.log(flatArray1);
+
+// We can also pass arguments like upto how many levels in an array should we make it Single-dimensional 
+let nestedArray2 = [1,[2,3,[4,5],6],7];
+console.log(nestedArray2.flat(10));

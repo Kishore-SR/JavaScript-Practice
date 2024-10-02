@@ -169,3 +169,6 @@ let object1 = {a: 10, b: 20, c:30};
 let object2 = {c: 40, d: 50, e:60};
 let newObject = {a:90,...object1, ...object2}; //Any repeated key-value pair which is common in both the objects - get's overwritten by the last repeated value
 console.log(newObject);
+
+let newObj  = {...object2, ...object1}; //Again c:30 gets overwritten because c also appears in object1
+console.log(newObj);
