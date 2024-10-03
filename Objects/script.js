@@ -172,3 +172,27 @@ console.log(newObject);
 
 let newObj  = {...object2, ...object1}; //Again c:30 gets overwritten because c also appears in object1
 console.log(newObj);
+
+
+let userData = {name: 'KSR', age: 20};
+let arrayData = Object.entries(userData); // Converts key-value pairs of Object into array format
+console.log(arrayData);
+
+let objData = Object.fromEntries(arrayData); // 'formEntries' converts the array type data back into 'Objects' again
+console.log(objData);
+
+//Even though the object obtained at the end by fromEntries looks same but it is not same as the orginal Object
+console.log(userData === objData);
+
+
+let response = {
+    user: {
+      name: 'Kishore',
+      address: {
+        city: 'Bangalore'
+      }
+    }
+  };
+  
+  let userCity = response?.user?.address?.city;
+  console.log(userCity);  // Output: 'Bangalore'

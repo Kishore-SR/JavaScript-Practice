@@ -55,3 +55,11 @@ console.log(flatArray1);
 // We can also pass arguments like upto how many levels in an array should we make it Single-dimensional 
 let nestedArray2 = [1,[2,3,[4,5],6],7];
 console.log(nestedArray2.flat(10));
+
+// Array.flatMap() method 
+const nums = [1, 2, 3];
+const doubledAndOriginal = nums.flatMap(num => [num, num * 2]);
+console.log(doubledAndOriginal); 
+
+
+  
