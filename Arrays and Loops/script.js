@@ -62,4 +62,6 @@ const doubledAndOriginal = nums.flatMap(num => [num, num * 2]);
 console.log(doubledAndOriginal); 
 
 
-  
+// Array.toSpliced() method 
+let newArray = ['My', 'Name', 'is', 'KSR'];
+console.log(newArray.toSpliced(1,2,'number','new'));

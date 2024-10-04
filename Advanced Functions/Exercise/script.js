@@ -17,12 +17,12 @@ let runTwice = function(run){
 runTwice(printStatement);
 
 // Q3 - A button which should grow 'double in size' on clicking after 2 seconds 
-let btnClick = document.querySelector('.btn');
-btnClick.addEventListener('click', ()=>{
-    setTimeout(()=>{
-        btnClick.style.scale='2';
-    },2000);
-})
+// let btnClick = document.querySelector('.btn');
+// btnClick.addEventListener('click', ()=>{
+//     setTimeout(()=>{
+//         btnClick.style.scale='2';
+//     },2000);
+// })
 
 // Q4 - Do the above Q with eventListener (already done) 
 
@@ -39,3 +39,21 @@ let squares = array.map((num)=>{
     return num * num;
 })
 console.log(`Array Squares: ${squares}`);
+
+
+// Higher Order Functions and Call Back Functions 
+// Q - Perfrom add() and sub() operation for two numbers using a callback function 
+function mathOperation(a, b, operation){
+    console.log('Function run');
+    
+    return operation(a,b);
+}
+function sum(a,b){
+    console.log('sum running');
+    return `Sum= ${a+b}`;
+}
+function sub(a,b){
+    console.log('sub running');
+    return `Sub= ${a-b}`;
+}
+console.log(mathOperation(8,3,sub));
